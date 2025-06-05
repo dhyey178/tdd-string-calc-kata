@@ -4,11 +4,10 @@ export class StringCalculator {
       return 0;
     }
 
-    const numberStrings = numbers.split(','); 
+    const numberStrings = numbers.split(/[\n,]/);
     const sum = numberStrings.reduce((acc, numStr) => {
       return acc + parseInt(numStr, 10);
     }, 0);
     return sum;
-
   }
 }
