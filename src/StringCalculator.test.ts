@@ -23,4 +23,11 @@ describe('StringCalculator', () => {
     expect(result).toBe(1);
   });
 
+  it('should return the sum of two numbers separated by a comma', () => {
+    const numbers = "1,2";
+
+    const result = calculator.Add(numbers);
+
+    expect(result).toBe(3);
+  });
 });
