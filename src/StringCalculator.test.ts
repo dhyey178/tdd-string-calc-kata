@@ -38,4 +38,12 @@ describe('StringCalculator', () => {
 
     expect(result).toBe(15);
   });
+
+  it('should handle new lines between numbers as delimiters', () => {
+    const numbers = "1\n2,3";
+
+    const result = calculator.Add(numbers);
+
+    expect(result).toBe(6);
+  });
 });
