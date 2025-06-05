@@ -14,4 +14,13 @@ describe('StringCalculator', () => {
 
     expect(result).toBe(0);
   });
+
+  it('should return the number for a single number string', () => {
+    const numbers = "1";
+
+    const result = calculator.Add(numbers);
+
+    expect(result).toBe(1);
+  });
+
 });
