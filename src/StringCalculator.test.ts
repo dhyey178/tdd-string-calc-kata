@@ -30,4 +30,12 @@ describe('StringCalculator', () => {
 
     expect(result).toBe(3);
   });
+
+  it('should return the sum of any amount of numbers separated by commas', () => {
+    const numbers = "1,2,3,4,5";
+
+    const result = calculator.Add(numbers);
+
+    expect(result).toBe(15);
+  });
 });
