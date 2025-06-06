@@ -23,7 +23,7 @@ export class StringCalculator {
       parsedNumbers.push(num);
       if (num < 0) {
         negativeNumbers.push(num);
-      } else if (num >= 0){
+      } else if (num <= 1000){
         sum += num;
       }
     }
