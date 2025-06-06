@@ -60,4 +60,10 @@ describe('StringCalculator', () => {
 
     expect(() => calculator.Add(numbers)).toThrow('negatives not allowed -1');
   });
+
+  it('should throw an exception listing all negative numbers', () => {
+    const numbers = "1,-2,3,-4,5";
+
+    expect(() => calculator.Add(numbers)).toThrow('negatives not allowed -2,-4');
+  });
 });
