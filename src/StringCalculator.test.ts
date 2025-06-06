@@ -90,4 +90,12 @@ describe('StringCalculator', () => {
 
     expect(result).toBe(6);
   });
+
+  it('should support multiple custom delimiters of any length', () => {
+    const numbers = "//[***][%%]\n1***2%%3";
+
+    const result = calculator.Add(numbers);
+
+    expect(result).toBe(6);
+  });  
 });
