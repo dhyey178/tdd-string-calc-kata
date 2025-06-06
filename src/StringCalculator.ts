@@ -8,12 +8,15 @@ export class StringCalculator {
       const customDelimiterPart = parts[0];
       const actualNumbersPart = numbers.substring(numbers.indexOf('\n')+1)
 
-      let customDelimiter;
+      let customDelimitersArray: string[] = [];
       if (customDelimiterPart.startsWith("//[")) {
-        customDelimiter =  customDelimiterPart.substring(3, customDelimiterPart.length-1);
+        customDelimitersArray = customDelimiterPart
+          .substring(2, customDelimiterPart.length - 1)
+          .split('][');
       } else {
-        customDelimiter = customDelimiterPart.substring(2);
+        customDelimitersArray.push(customDelimiterPart.substring(2));
       }
+      const customDelimiter = customDelimitersArray.join('|');
 
       delimiters = new RegExp(`[\\n,${customDelimiter}]`);
       numbersToParse = actualNumbersPart;
