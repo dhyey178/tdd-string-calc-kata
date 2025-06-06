@@ -74,4 +74,12 @@ describe('StringCalculator', () => {
 
     expect(result).toBe(1005);
   });
+
+  it('should support custom delimiters of any length', () => {
+    const numbers = "//[***]\n1***2***3";
+
+    const result = calculator.Add(numbers);
+
+    expect(result).toBe(6);
+  });
 });
