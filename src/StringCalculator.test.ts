@@ -46,4 +46,12 @@ describe('StringCalculator', () => {
 
     expect(result).toBe(6);
   });
+
+  it('should support custom single character delimiters', () => {
+    const numbers = "//;\n1;2";
+
+    const result = calculator.Add(numbers);
+
+    expect(result).toBe(3);
+  });
 });
