@@ -54,4 +54,10 @@ describe('StringCalculator', () => {
 
     expect(result).toBe(3);
   });
+
+  it('should throw an exception for a single negative number', () => {
+    const numbers = "-1";
+
+    expect(() => calculator.Add(numbers)).toThrow('negatives not allowed -1');
+  });
 });
